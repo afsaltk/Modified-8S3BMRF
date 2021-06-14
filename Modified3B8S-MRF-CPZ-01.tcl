@@ -186,10 +186,10 @@
 	node 438 $Pier4 [expr $Floor3 + $phvert23];
 	node 537 $Pier5 $Floor3;	# zero-stiffness spring will be used on p-delta column
 	# column hinges at mid of Story 3
-	node 130 $Pier1 [expr $Floor3 + $phvert23 + 0.5*$HStoryTyp];
-	node 230 $Pier2 [expr $Floor3 + $phvert23 + 0.5*$HStoryTyp];
-	node 330 $Pier3 [expr $Floor3 + $phvert23 + 0.5*$HStoryTyp];
-	node 430 $Pier4 [expr $Floor3 + $phvert23 + 0.5*$HStoryTyp];
+	node 130 $Pier1 [expr $Floor3 + $phvert23 + 0.5*$HStoryTyp];	#xy0, x=pier y=floor
+	node 230 $Pier2 [expr $Floor3 + $phvert23 + 0.5*$HStoryTyp];	#xy0, x=pier y=floor 	
+	node 330 $Pier3 [expr $Floor3 + $phvert23 + 0.5*$HStoryTyp];	#xy0, x=pier y=floor
+	node 430 $Pier4 [expr $Floor3 + $phvert23 + 0.5*$HStoryTyp];	#xy0, x=pier y=floor
 	# column hinges at top of Story 3
 	node 145 $Pier1 [expr $Floor4 - $phvert45];
 	node 146 $Pier1 [expr $Floor4 - $phvert45];
@@ -231,10 +231,10 @@
 	node 458 $Pier4 [expr $Floor5 + $phvert45];
 	node 557 $Pier5 $Floor5;	# zero-stiffness spring will be used on p-delta column
 	# column hinges at mid of Story 5
-	node 150 $Pier1 [expr $Floor5 + $phvert45 + 0.5*$HStoryTyp];
-	node 250 $Pier2 [expr $Floor5 + $phvert45 + 0.5*$HStoryTyp];
-	node 350 $Pier3 [expr $Floor5 + $phvert45 + 0.5*$HStoryTyp];
-	node 450 $Pier4 [expr $Floor5 + $phvert45 + 0.5*$HStoryTyp];
+	node 150 $Pier1 [expr $Floor5 + $phvert45 + 0.5*$HStoryTyp];	#xy0, x=pier y=floor
+	node 250 $Pier2 [expr $Floor5 + $phvert45 + 0.5*$HStoryTyp];	#xy0, x=pier y=floor
+	node 350 $Pier3 [expr $Floor5 + $phvert45 + 0.5*$HStoryTyp];	#xy0, x=pier y=floor
+	node 450 $Pier4 [expr $Floor5 + $phvert45 + 0.5*$HStoryTyp];	#xy0, x=pier y=floor
 	# column hinges at top of Story 5
 	node 165 $Pier1 [expr $Floor6 - $phvert67];
 	node 166 $Pier1 [expr $Floor6 - $phvert67];
@@ -276,10 +276,10 @@
 	node 478 $Pier4 [expr $Floor7 + $phvert67];
 	node 577 $Pier5 $Floor7;	# zero-stiffness spring will be used on p-delta column
 	# column hinges at mid of Story 7
-	node 170 $Pier1 [expr $Floor7 + $phvert67 + 0.5*$HStoryTyp];
-	node 270 $Pier2 [expr $Floor7 + $phvert67 + 0.5*$HStoryTyp];
-	node 370 $Pier3 [expr $Floor7 + $phvert67 + 0.5*$HStoryTyp];
-	node 470 $Pier4 [expr $Floor7 + $phvert67 + 0.5*$HStoryTyp];
+	node 170 $Pier1 [expr $Floor7 + $phvert67 + 0.5*$HStoryTyp];	#xy0, x=pier y=floor
+	node 270 $Pier2 [expr $Floor7 + $phvert67 + 0.5*$HStoryTyp];	#xy0, x=pier y=floor
+	node 370 $Pier3 [expr $Floor7 + $phvert67 + 0.5*$HStoryTyp];	#xy0, x=pier y=floor
+	node 470 $Pier4 [expr $Floor7 + $phvert67 + 0.5*$HStoryTyp];	#xy0, x=pier y=floor
 	# column hinges at top of Story 7
 	node 185 $Pier1 [expr $Floor8 - $phvert89];
 	node 186 $Pier1 [expr $Floor8 - $phvert89];
@@ -1092,46 +1092,46 @@
 	element elasticBeamColumn  122  228 235 $Acol_2312 $Es $Icol_2312mod $PDeltaTransf;	# Pier 2
 	element elasticBeamColumn  132  328 335 $Acol_2312 $Es $Icol_2312mod $PDeltaTransf;	# Pier 3
 	element elasticBeamColumn  142  428 435 $Acol_1412 $Es $Icol_1412mod $PDeltaTransf;	# Pier 4
-	# Columns Story 3 below node
-	element elasticBeamColumn  1131  138 130 $Acol_1412 $Es $Icol_1412mod $PDeltaTransf;	# Pier 1
-	element elasticBeamColumn  1231  238 230 $Acol_2312 $Es $Icol_2312mod $PDeltaTransf;	# Pier 2
-	element elasticBeamColumn  1331  338 330 $Acol_2312 $Es $Icol_2312mod $PDeltaTransf;	# Pier 3
-	element elasticBeamColumn  1431  438 430 $Acol_1412 $Es $Icol_1412mod $PDeltaTransf;	# Pier 4
-	# Columns Story 3 above node
-	element elasticBeamColumn  1132  130 145 $Acol_1434 $Es $Icol_1434mod $PDeltaTransf;	# Pier 1
-	element elasticBeamColumn  1232  230 245 $Acol_2334 $Es $Icol_2334mod $PDeltaTransf;	# Pier 2
-	element elasticBeamColumn  1332  330 345 $Acol_2334 $Es $Icol_2334mod $PDeltaTransf;	# Pier 3
-	element elasticBeamColumn  1432  430 445 $Acol_1434 $Es $Icol_1434mod $PDeltaTransf;	# Pier 4
+	# Columns Story 3 below node splice
+	element elasticBeamColumn  1131  138 130 $Acol_1412 $Es $Icol_1412mod $PDeltaTransf;	# Pier 1 xyza x=column y=pier z=story a=1,2 1=down 2=up
+	element elasticBeamColumn  1231  238 230 $Acol_2312 $Es $Icol_2312mod $PDeltaTransf;	# Pier 2 xyza x=column y=pier z=story a=1,2 1=down 2=up
+	element elasticBeamColumn  1331  338 330 $Acol_2312 $Es $Icol_2312mod $PDeltaTransf;	# Pier 3 xyza x=column y=pier z=story a=1,2 1=down 2=up
+	element elasticBeamColumn  1431  438 430 $Acol_1412 $Es $Icol_1412mod $PDeltaTransf;	# Pier 4 xyza x=column y=pier z=story a=1,2 1=down 2=up
+	# Columns Story 3 above node splice 
+	element elasticBeamColumn  1132  130 145 $Acol_1434 $Es $Icol_1434mod $PDeltaTransf;	# Pier 1 xyza x=column y=pier z=story a=1,2 1=down 2=up 
+	element elasticBeamColumn  1232  230 245 $Acol_2334 $Es $Icol_2334mod $PDeltaTransf;	# Pier 2 xyza x=column y=pier z=story a=1,2 1=down 2=up
+	element elasticBeamColumn  1332  330 345 $Acol_2334 $Es $Icol_2334mod $PDeltaTransf;	# Pier 3 xyza x=column y=pier z=story a=1,2 1=down 2=up
+	element elasticBeamColumn  1432  430 445 $Acol_1434 $Es $Icol_1434mod $PDeltaTransf;	# Pier 4 xyza x=column y=pier z=story a=1,2 1=down 2=up
 	# Columns Story 4
 	element elasticBeamColumn  114  148 155 $Acol_1434 $Es $Icol_1434mod $PDeltaTransf;	# Pier 1
 	element elasticBeamColumn  124  248 255 $Acol_2334 $Es $Icol_2334mod $PDeltaTransf;	# Pier 2
 	element elasticBeamColumn  134  348 355 $Acol_2334 $Es $Icol_2334mod $PDeltaTransf;	# Pier 3
 	element elasticBeamColumn  144  448 455 $Acol_1434 $Es $Icol_1434mod $PDeltaTransf;	# Pier 4
-	# Columns Story 5 below node
-	element elasticBeamColumn  1151  158 150 $Acol_1434 $Es $Icol_1434mod $PDeltaTransf;	# Pier 1
-	element elasticBeamColumn  1251  258 250 $Acol_2334 $Es $Icol_2334mod $PDeltaTransf;	# Pier 2
-	element elasticBeamColumn  1351  358 350 $Acol_2334 $Es $Icol_2334mod $PDeltaTransf;	# Pier 3
-	element elasticBeamColumn  1451  458 450 $Acol_1434 $Es $Icol_1434mod $PDeltaTransf;	# Pier 4
-	# Columns Story 5 above node
-	element elasticBeamColumn  1152  150 165 $Acol_1456 $Es $Icol_1456mod $PDeltaTransf;	# Pier 1
-	element elasticBeamColumn  1252  250 265 $Acol_2356 $Es $Icol_2356mod $PDeltaTransf;	# Pier 2
-	element elasticBeamColumn  1352  350 365 $Acol_2356 $Es $Icol_2356mod $PDeltaTransf;	# Pier 3
-	element elasticBeamColumn  1452  450 465 $Acol_1456 $Es $Icol_1456mod $PDeltaTransf;	# Pier 4
+	# Columns Story 5 below node splice
+	element elasticBeamColumn  1151  158 150 $Acol_1434 $Es $Icol_1434mod $PDeltaTransf;	# Pier 1 xyza x=column y=pier z=story a=1,2 1=down 2=up
+	element elasticBeamColumn  1251  258 250 $Acol_2334 $Es $Icol_2334mod $PDeltaTransf;	# Pier 2 xyza x=column y=pier z=story a=1,2 1=down 2=up
+	element elasticBeamColumn  1351  358 350 $Acol_2334 $Es $Icol_2334mod $PDeltaTransf;	# Pier 3 xyza x=column y=pier z=story a=1,2 1=down 2=up
+	element elasticBeamColumn  1451  458 450 $Acol_1434 $Es $Icol_1434mod $PDeltaTransf;	# Pier 4 xyza x=column y=pier z=story a=1,2 1=down 2=up
+	# Columns Story 5 above node splice
+	element elasticBeamColumn  1152  150 165 $Acol_1456 $Es $Icol_1456mod $PDeltaTransf;	# Pier 1 xyza x=column y=pier z=story a=1,2 1=down 2=up
+	element elasticBeamColumn  1252  250 265 $Acol_2356 $Es $Icol_2356mod $PDeltaTransf;	# Pier 2 xyza x=column y=pier z=story a=1,2 1=down 2=up
+	element elasticBeamColumn  1352  350 365 $Acol_2356 $Es $Icol_2356mod $PDeltaTransf;	# Pier 3 xyza x=column y=pier z=story a=1,2 1=down 2=up
+	element elasticBeamColumn  1452  450 465 $Acol_1456 $Es $Icol_1456mod $PDeltaTransf;	# Pier 4 xyza x=column y=pier z=story a=1,2 1=down 2=up
 	# Columns Story 6
 	element elasticBeamColumn  116  168 175 $Acol_1456 $Es $Icol_1456mod $PDeltaTransf;	# Pier 1
 	element elasticBeamColumn  126  268 275 $Acol_2356 $Es $Icol_2356mod $PDeltaTransf;	# Pier 2
 	element elasticBeamColumn  136  368 375 $Acol_2356 $Es $Icol_2356mod $PDeltaTransf;	# Pier 3
 	element elasticBeamColumn  146  468 475 $Acol_1456 $Es $Icol_1456mod $PDeltaTransf;	# Pier 4
-	# Columns Story 7 below node
-	element elasticBeamColumn  1171  178 170 $Acol_1456 $Es $Icol_1456mod $PDeltaTransf;	# Pier 1
-	element elasticBeamColumn  1271  278 270 $Acol_2356 $Es $Icol_2356mod $PDeltaTransf;	# Pier 2
-	element elasticBeamColumn  1371  378 370 $Acol_2356 $Es $Icol_2356mod $PDeltaTransf;	# Pier 3
-	element elasticBeamColumn  1471  478 470 $Acol_1456 $Es $Icol_1456mod $PDeltaTransf;	# Pier 4
-	# Columns Story 7 above node
-	element elasticBeamColumn  1172  170 185 $Acol_1478 $Es $Icol_1478mod $PDeltaTransf;	# Pier 1
-	element elasticBeamColumn  1272  270 285 $Acol_2378 $Es $Icol_2378mod $PDeltaTransf;	# Pier 2
-	element elasticBeamColumn  1372  370 385 $Acol_2378 $Es $Icol_2378mod $PDeltaTransf;	# Pier 3
-	element elasticBeamColumn  1472  470 485 $Acol_1478 $Es $Icol_1478mod $PDeltaTransf;	# Pier 4
+	# Columns Story 7 below node splice
+	element elasticBeamColumn  1171  178 170 $Acol_1456 $Es $Icol_1456mod $PDeltaTransf;	# Pier 1 xyza x=column y=pier z=story a=1,2 1=down 2=up
+	element elasticBeamColumn  1271  278 270 $Acol_2356 $Es $Icol_2356mod $PDeltaTransf;	# Pier 2 xyza x=column y=pier z=story a=1,2 1=down 2=up
+	element elasticBeamColumn  1371  378 370 $Acol_2356 $Es $Icol_2356mod $PDeltaTransf;	# Pier 3 xyza x=column y=pier z=story a=1,2 1=down 2=up
+	element elasticBeamColumn  1471  478 470 $Acol_1456 $Es $Icol_1456mod $PDeltaTransf;	# Pier 4 xyza x=column y=pier z=story a=1,2 1=down 2=up
+	# Columns Story 7 above node splice
+	element elasticBeamColumn  1172  170 185 $Acol_1478 $Es $Icol_1478mod $PDeltaTransf;	# Pier 1 xyza x=column y=pier z=story a=1,2 1=down 2=up
+	element elasticBeamColumn  1272  270 285 $Acol_2378 $Es $Icol_2378mod $PDeltaTransf;	# Pier 2 xyza x=column y=pier z=story a=1,2 1=down 2=up
+	element elasticBeamColumn  1372  370 385 $Acol_2378 $Es $Icol_2378mod $PDeltaTransf;	# Pier 3 xyza x=column y=pier z=story a=1,2 1=down 2=up
+	element elasticBeamColumn  1472  470 485 $Acol_1478 $Es $Icol_1478mod $PDeltaTransf;	# Pier 4 xyza x=column y=pier z=story a=1,2 1=down 2=up
 	# Columns Story 8
 	element elasticBeamColumn  118  188 195 $Acol_1478 $Es $Icol_1478mod $PDeltaTransf;	# Pier 1
 	element elasticBeamColumn  128  288 295 $Acol_2378 $Es $Icol_2378mod $PDeltaTransf;	# Pier 2
