@@ -136,9 +136,7 @@
 	node 59 $Pier5 $Floor9;
 	
 
-# define extra nodes for plastic hinge rotational springs
-	# nodeID convention:  "xya" where x = Pier #, y = Floor #, a = location relative to beam-column joint
-	# "a" convention: 1,2 = left; 3,4 = right; (used for beams)
+
 	# "a" convention: 5,6 = below; 7,8 = above; (used for columns)
 	# column hinges at bottom of Story 1 (base)
 	node 117 $Pier1 $Floor1;
@@ -920,80 +918,80 @@
 
 # define column section W24x146 for Story 1&2 for pier 1&4 
 
-	set Acol_1412  43.0;		# cross-sectional area
-	set Icol_1412  4580.0;		# moment of inertia
-	set Mycol_1412 22990.0;		# yield moment at plastic hinge location (i.e., My of RBS section)
-	set dcol_1412 24.74;			# depth
-	set bfcol_1412 12.9;		# flange width
-	set tfcol_1412 1.09;		# flange thickness
-	set twcol_1412 0.65;		# web thickness
+	set Acol_ext12  43.0;		# cross-sectional area
+	set Icol_ext12  4580.0;		# moment of inertia
+	set Mycol_ext12 22990.0;		# yield moment at plastic hinge location (i.e., My of RBS section)
+	set dcol_ext12 24.74;			# depth
+	set bfcol_ext12 12.9;		# flange width
+	set tfcol_ext12 1.09;		# flange thickness
+	set twcol_ext12 0.65;		# web thickness
 
 # define column section W24x162 for Story 1&2 for pier 2&3 
 
-	set Acol_2312  47.7;		# cross-sectional area
-	set Icol_2312  5170.0;		# moment of inertia
-	set Mycol_2312 25740.0;		# yield moment at plastic hinge location (i.e., My of RBS section)
-	set dcol_2312 25.0;			# depth
-	set bfcol_2312 12.955;		# flange width
-	set tfcol_2312 1.22;		# flange thickness
-	set twcol_2312 0.705;		# web thickness
+	set Acol_int12  47.7;		# cross-sectional area
+	set Icol_int12  5170.0;		# moment of inertia
+	set Mycol_int12 25740.0;		# yield moment at plastic hinge location (i.e., My of RBS section)
+	set dcol_int12 25.0;			# depth
+	set bfcol_int12 12.955;		# flange width
+	set tfcol_int12 1.22;		# flange thickness
+	set twcol_int12 0.705;		# web thickness
 
 # define column section W24x131 for Story 3&4 for pier 1&4 
-	set Acol_1434  38.5;		# cross-sectional area
-	set Icol_1434  4020.0;		# moment of inertia
-	set Mycol_1434 20350.0;		# yield moment at plastic hinge location (i.e., My of RBS section)
-	set dcol_1434 24.48;			# depth
-	set bfcol_1434 12.855;		# flange width
-	set tfcol_1434 0.96;		# flange thickness
-	set twcol_1434 0.605;		# web thickness
+	set Acol_ext34  38.5;		# cross-sectional area
+	set Icol_ext34  4020.0;		# moment of inertia
+	set Mycol_ext34 20350.0;		# yield moment at plastic hinge location (i.e., My of RBS section)
+	set dcol_ext34 24.48;			# depth
+	set bfcol_ext34 12.855;		# flange width
+	set tfcol_ext34 0.96;		# flange thickness
+	set twcol_ext34 0.605;		# web thickness
 
 # define column section W24x162 for Story 3&4 for pier 2&3 
 
-	set Acol_2334  47.7;		# cross-sectional area
-	set Icol_2334  5170.0;		# moment of inertia
-	set Mycol_2334 25740.0;		# yield moment at plastic hinge location (i.e., My of RBS section)
-	set dcol_2334 25.0;			# depth
-	set bfcol_2334 12.955;		# flange width
-	set tfcol_2334 1.22;		# flange thickness
-	set twcol_2334 0.705;		# web thickness
+	set Acol_int34  47.7;		# cross-sectional area
+	set Icol_int34  5170.0;		# moment of inertia
+	set Mycol_int34 25740.0;		# yield moment at plastic hinge location (i.e., My of RBS section)
+	set dcol_int34 25.0;			# depth
+	set bfcol_int34 12.955;		# flange width
+	set tfcol_int34 1.22;		# flange thickness
+	set twcol_int34 0.705;		# web thickness
 
 # define column section W24x94 for Story 5&6 for pier 1&4 
-	set Acol_1456  27.7;		# cross-sectional area
-	set Icol_1456  2700.0;		# moment of inertia
-	set Mycol_1456 13970.0;		# yield moment at plastic hinge location (i.e., My of RBS section)
-	set dcol_1456 24.31;			# depth
-	set bfcol_1456 9.065;		# flange width
-	set tfcol_1456 0.875;		# flange thickness
-	set twcol_1456 0.515;		# web thickness
+	set Acol_ext56  27.7;		# cross-sectional area
+	set Icol_ext56  2700.0;		# moment of inertia
+	set Mycol_ext56 13970.0;		# yield moment at plastic hinge location (i.e., My of RBS section)
+	set dcol_ext56 24.31;			# depth
+	set bfcol_ext56 9.065;		# flange width
+	set tfcol_ext56 0.875;		# flange thickness
+	set twcol_ext56 0.515;		# web thickness
 
 
 # define column section W24x131 for Story 5&6 for pier 2&3 
-	set Acol_2356  38.5;		# cross-sectional area
-	set Icol_2356  4020.0;		# moment of inertia
-	set Mycol_2356 20350.0;		# yield moment at plastic hinge location (i.e., My of RBS section)
-	set dcol_2356 24.48;			# depth
-	set bfcol_2356 12.9;		# flange width
-	set tfcol_2356 0.96;		# flange thickness
-	set twcol_2356 0.605;		# web thickness
+	set Acol_int56  38.5;		# cross-sectional area
+	set Icol_int56  4020.0;		# moment of inertia
+	set Mycol_int56 20350.0;		# yield moment at plastic hinge location (i.e., My of RBS section)
+	set dcol_int56 24.48;			# depth
+	set bfcol_int56 12.9;		# flange width
+	set tfcol_int56 0.96;		# flange thickness
+	set twcol_int56 0.605;		# web thickness
 
 # define column section W24x76 for Story 7&8 for pier 1&4 
 
-	set Acol_1478  22.4;		# cross-sectional area
-	set Icol_1478  2100.0;		# moment of inertia
-	set Mycol_1478 11000.0;		# yield moment at plastic hinge location (i.e., My of RBS section)
-	set dcol_1478 23.92;			# depth
-	set bfcol_1478 8.99;		# flange width
-	set tfcol_1478 0.68;		# flange thickness
-	set twcol_1478 0.44;		# web thickness
+	set Acol_ext78  22.4;		# cross-sectional area
+	set Icol_ext78  2100.0;		# moment of inertia
+	set Mycol_ext78 11000.0;		# yield moment at plastic hinge location (i.e., My of RBS section)
+	set dcol_ext78 23.92;			# depth
+	set bfcol_ext78 8.99;		# flange width
+	set tfcol_ext78 0.68;		# flange thickness
+	set twcol_ext78 0.44;		# web thickness
 
 # define column section W24x76 for Story 7&8 for pier 2&3 
-	set Acol_2378  22.4;		# cross-sectional area
-	set Icol_2378  2100.0;		# moment of inertia
-	set Mycol_2378 11000.0;		# yield moment at plastic hinge location (i.e., My of RBS section)
-	set dcol_2378 23.92;			# depth
-	set bfcol_2378 8.99;		# flange width
-	set tfcol_2378 0.68;		# flange thickness
-	set twcol_2378 0.44;		# web thickness
+	set Acol_int78  22.4;		# cross-sectional area
+	set Icol_int78  2100.0;		# moment of inertia
+	set Mycol_int78 11000.0;		# yield moment at plastic hinge location (i.e., My of RBS section)
+	set dcol_int78 23.92;			# depth
+	set bfcol_int78 8.99;		# flange width
+	set tfcol_int78 0.68;		# flange thickness
+	set twcol_int78 0.44;		# web thickness
 
 # define beam section W27x94 for Floor 2&3
 	set Abeam_23  27.7;		# cross-sectional area (full section properties)
@@ -1029,14 +1027,14 @@
 	set n 10.0;		# stiffness multiplier for rotational spring
 
 	# calculate modified moment of inertia for elastic elements between plastic hinge springs
-	set Icol_1412mod  [expr $Icol_1412*($n+1.0)/$n];	# modified moment of inertia for columns in Pier 1,4 Story 1,2 
-	set Icol_2312mod  [expr $Icol_2312*($n+1.0)/$n];	# modified moment of inertia for columns in Pier 2,3 Story 1,2
-	set Icol_1434mod  [expr $Icol_1434*($n+1.0)/$n];	# modified moment of inertia for columns in Pier 1,4 Story 3,4
-	set Icol_2334mod  [expr $Icol_2334*($n+1.0)/$n];	# modified moment of inertia for columns in Pier 2,3 Story 3,4
-	set Icol_1456mod  [expr $Icol_1456*($n+1.0)/$n];	# modified moment of inertia for columns in Pier 1,4 Story 5,6
-	set Icol_2356mod  [expr $Icol_2356*($n+1.0)/$n];	# modified moment of inertia for columns in Pier 2,3 Story 5,6
-	set Icol_1478mod  [expr $Icol_1478*($n+1.0)/$n];	# modified moment of inertia for columns in Pier 1,4 Story 7,8
-	set Icol_2378mod  [expr $Icol_2378*($n+1.0)/$n];	# modified moment of inertia for columns in Pier 2,3 Story 7,8
+	set Icol_ext12mod  [expr $Icol_ext12*($n+1.0)/$n];	# modified moment of inertia for columns in Pier 1,4 Story 1,2 
+	set Icol_int12mod  [expr $Icol_int12*($n+1.0)/$n];	# modified moment of inertia for columns in Pier 2,3 Story 1,2
+	set Icol_ext34mod  [expr $Icol_ext34*($n+1.0)/$n];	# modified moment of inertia for columns in Pier 1,4 Story 3,4
+	set Icol_int34mod  [expr $Icol_int34*($n+1.0)/$n];	# modified moment of inertia for columns in Pier 2,3 Story 3,4
+	set Icol_ext56mod  [expr $Icol_ext56*($n+1.0)/$n];	# modified moment of inertia for columns in Pier 1,4 Story 5,6
+	set Icol_int56mod  [expr $Icol_int56*($n+1.0)/$n];	# modified moment of inertia for columns in Pier 2,3 Story 5,6
+	set Icol_ext78mod  [expr $Icol_ext78*($n+1.0)/$n];	# modified moment of inertia for columns in Pier 1,4 Story 7,8
+	set Icol_int78mod  [expr $Icol_int78*($n+1.0)/$n];	# modified moment of inertia for columns in Pier 2,3 Story 7,8
 
 	set Ibeam_23mod [expr $Ibeam_23*($n+1.0)/$n];	# modified moment of inertia for beams in Floor 2,3
 	set Ibeam_45mod [expr $Ibeam_45*($n+1.0)/$n];	# modified moment of inertia for beams in Floor 4,5
@@ -1044,22 +1042,22 @@
 	set Ibeam_89mod [expr $Ibeam_89*($n+1.0)/$n];	# modified moment of inertia for beams in Floor 8,9
 
 	# calculate modified rotational stiffness for plastic hinge springs: use length between springs // Ks_col_x1x2y x1=Pier x2=pier y=story
-	set Ks_col_141   [expr $n*6.0*$Es*$Icol_1412mod/($HStory1-$phvert23)];		# rotational stiffness of Story 1, Pier 1&4 column springs 
-	set Ks_col_231   [expr $n*6.0*$Es*$Icol_2312mod/($HStory1-$phvert23)];		# rotational stiffness of Story 1, Pier 2&3 column springs 
-	set Ks_col_142   [expr $n*6.0*$Es*$Icol_1412mod/($HStoryTyp-$phvert23-$phvert23)];	# rotational stiffness of Story 2, Pier 1&4 column springs
-	set Ks_col_232   [expr $n*6.0*$Es*$Icol_2312mod/($HStoryTyp-$phvert23-$phvert23)];	# rotational stiffness of Story 2, Pier 2&3 column springs
-	set Ks_col_143   [expr $n*6.0*$Es*$Icol_1434mod/($HStoryTyp-$phvert23-$phvert45)];	# rotational stiffness of Story 3, Pier 1&4 column springs
-	set Ks_col_233   [expr $n*6.0*$Es*$Icol_2334mod/($HStoryTyp-$phvert23-$phvert45)];	# rotational stiffness of Story 3, Pier 2&3 column springs
-	set Ks_col_144   [expr $n*6.0*$Es*$Icol_1434mod/($HStoryTyp-$phvert45-$phvert45)];	# rotational stiffness of Story 4, Pier 1&4 column springs
-	set Ks_col_234   [expr $n*6.0*$Es*$Icol_2334mod/($HStoryTyp-$phvert45-$phvert45)];	# rotational stiffness of Story 4, Pier 2&3 column springs
-	set Ks_col_145   [expr $n*6.0*$Es*$Icol_1456mod/($HStoryTyp-$phvert45-$phvert67)];	# rotational stiffness of Story 5, Pier 1&4 column springs
-	set Ks_col_235   [expr $n*6.0*$Es*$Icol_2356mod/($HStoryTyp-$phvert45-$phvert67)];	# rotational stiffness of Story 5, Pier 2&3 column springs
-	set Ks_col_146   [expr $n*6.0*$Es*$Icol_1456mod/($HStoryTyp-$phvert67-$phvert67)];	# rotational stiffness of Story 6, Pier 1&4 column springs
-	set Ks_col_236   [expr $n*6.0*$Es*$Icol_2356mod/($HStoryTyp-$phvert67-$phvert67)];	# rotational stiffness of Story 6, Pier 2&3 column springs
-	set Ks_col_147   [expr $n*6.0*$Es*$Icol_1478mod/($HStoryTyp-$phvert67-$phvert89)];	# rotational stiffness of Story 7, Pier 1&4 column springs
-	set Ks_col_237   [expr $n*6.0*$Es*$Icol_2378mod/($HStoryTyp-$phvert67-$phvert89)];	# rotational stiffness of Story 7, Pier 2&3 column springs
-	set Ks_col_148   [expr $n*6.0*$Es*$Icol_1478mod/($HStoryTyp-$phvert89-$phvert89)];	# rotational stiffness of Story 8, Pier 1&4 column springs
-	set Ks_col_238   [expr $n*6.0*$Es*$Icol_2378mod/($HStoryTyp-$phvert89-$phvert89)];	# rotational stiffness of Story 8, Pier 2&3 column springs
+	set Ks_col_ext1   [expr $n*6.0*$Es*$Icol_ext12mod/($HStory1-$phvert23)];		# rotational stiffness of Story 1, Pier 1&4 column springs 
+	set Ks_col_int1   [expr $n*6.0*$Es*$Icol_int12mod/($HStory1-$phvert23)];		# rotational stiffness of Story 1, Pier 2&3 column springs 
+	set Ks_col_ext2   [expr $n*6.0*$Es*$Icol_ext12mod/($HStoryTyp-$phvert23-$phvert23)];	# rotational stiffness of Story 2, Pier 1&4 column springs
+	set Ks_col_int2   [expr $n*6.0*$Es*$Icol_int12mod/($HStoryTyp-$phvert23-$phvert23)];	# rotational stiffness of Story 2, Pier 2&3 column springs
+	set Ks_col_ext3   [expr $n*6.0*$Es*$Icol_ext34mod/($HStoryTyp-$phvert23-$phvert45)];	# rotational stiffness of Story 3, Pier 1&4 column springs
+	set Ks_col_int3   [expr $n*6.0*$Es*$Icol_int34mod/($HStoryTyp-$phvert23-$phvert45)];	# rotational stiffness of Story 3, Pier 2&3 column springs
+	set Ks_col_ext4   [expr $n*6.0*$Es*$Icol_ext34mod/($HStoryTyp-$phvert45-$phvert45)];	# rotational stiffness of Story 4, Pier 1&4 column springs
+	set Ks_col_int4   [expr $n*6.0*$Es*$Icol_int34mod/($HStoryTyp-$phvert45-$phvert45)];	# rotational stiffness of Story 4, Pier 2&3 column springs
+	set Ks_col_ext5   [expr $n*6.0*$Es*$Icol_ext56mod/($HStoryTyp-$phvert45-$phvert67)];	# rotational stiffness of Story 5, Pier 1&4 column springs
+	set Ks_col_int5   [expr $n*6.0*$Es*$Icol_int56mod/($HStoryTyp-$phvert45-$phvert67)];	# rotational stiffness of Story 5, Pier 2&3 column springs
+	set Ks_col_ext6   [expr $n*6.0*$Es*$Icol_ext56mod/($HStoryTyp-$phvert67-$phvert67)];	# rotational stiffness of Story 6, Pier 1&4 column springs
+	set Ks_col_int6   [expr $n*6.0*$Es*$Icol_int56mod/($HStoryTyp-$phvert67-$phvert67)];	# rotational stiffness of Story 6, Pier 2&3 column springs
+	set Ks_col_ext7   [expr $n*6.0*$Es*$Icol_ext78mod/($HStoryTyp-$phvert67-$phvert89)];	# rotational stiffness of Story 7, Pier 1&4 column springs
+	set Ks_col_int7   [expr $n*6.0*$Es*$Icol_int78mod/($HStoryTyp-$phvert67-$phvert89)];	# rotational stiffness of Story 7, Pier 2&3 column springs
+	set Ks_col_ext8   [expr $n*6.0*$Es*$Icol_ext78mod/($HStoryTyp-$phvert89-$phvert89)];	# rotational stiffness of Story 8, Pier 1&4 column springs
+	set Ks_col_int8   [expr $n*6.0*$Es*$Icol_int78mod/($HStoryTyp-$phvert89-$phvert89)];	# rotational stiffness of Story 8, Pier 2&3 column springs
 
 	#Ks_beam_y1y2z y1=floor y2floor z = bay
 	set Ks_beam_231 [expr $n*6.0*$Es*$Ibeam_23mod/($WBay-$phlat1423-$phlat2323)];		# rotational stiffness of Floor 2,3 & Bay 1 beam springs
@@ -1083,60 +1081,60 @@
 	# command: element elasticBeamColumn $eleID $iNode $jNode $A $E $I $transfID
 	# eleID convention:  "1xy" where 1 = col, x = Pier #, y = Story #
 	# Columns Story 1
-	element elasticBeamColumn  111  117 125 $Acol_1412 $Es $Icol_1412mod $PDeltaTransf;	# Pier 1
-	element elasticBeamColumn  121  217 225 $Acol_2312 $Es $Icol_2312mod $PDeltaTransf;	# Pier 2
-	element elasticBeamColumn  131  317 325 $Acol_2312 $Es $Icol_2312mod $PDeltaTransf;	# Pier 3
-	element elasticBeamColumn  141  417 425 $Acol_1412 $Es $Icol_1412mod $PDeltaTransf;	# Pier 4
+	element elasticBeamColumn  111  117 125 $Acol_ext12 $Es $Icol_ext12mod $PDeltaTransf;	# Pier 1
+	element elasticBeamColumn  121  217 225 $Acol_int12 $Es $Icol_int12mod $PDeltaTransf;	# Pier 2
+	element elasticBeamColumn  131  317 325 $Acol_int12 $Es $Icol_int12mod $PDeltaTransf;	# Pier 3
+	element elasticBeamColumn  141  417 425 $Acol_ext12 $Es $Icol_ext12mod $PDeltaTransf;	# Pier 4
 	# Columns Story 2
-	element elasticBeamColumn  112  128 135 $Acol_1412 $Es $Icol_1412mod $PDeltaTransf;	# Pier 1
-	element elasticBeamColumn  122  228 235 $Acol_2312 $Es $Icol_2312mod $PDeltaTransf;	# Pier 2
-	element elasticBeamColumn  132  328 335 $Acol_2312 $Es $Icol_2312mod $PDeltaTransf;	# Pier 3
-	element elasticBeamColumn  142  428 435 $Acol_1412 $Es $Icol_1412mod $PDeltaTransf;	# Pier 4
+	element elasticBeamColumn  112  128 135 $Acol_ext12 $Es $Icol_ext12mod $PDeltaTransf;	# Pier 1
+	element elasticBeamColumn  122  228 235 $Acol_int12 $Es $Icol_int12mod $PDeltaTransf;	# Pier 2
+	element elasticBeamColumn  132  328 335 $Acol_int12 $Es $Icol_int12mod $PDeltaTransf;	# Pier 3
+	element elasticBeamColumn  142  428 435 $Acol_ext12 $Es $Icol_ext12mod $PDeltaTransf;	# Pier 4
 	# Columns Story 3 below node splice
-	element elasticBeamColumn  1131  138 130 $Acol_1412 $Es $Icol_1412mod $PDeltaTransf;	# Pier 1 xyza x=column y=pier z=story a=1,2 1=down 2=up
-	element elasticBeamColumn  1231  238 230 $Acol_2312 $Es $Icol_2312mod $PDeltaTransf;	# Pier 2 xyza x=column y=pier z=story a=1,2 1=down 2=up
-	element elasticBeamColumn  1331  338 330 $Acol_2312 $Es $Icol_2312mod $PDeltaTransf;	# Pier 3 xyza x=column y=pier z=story a=1,2 1=down 2=up
-	element elasticBeamColumn  1431  438 430 $Acol_1412 $Es $Icol_1412mod $PDeltaTransf;	# Pier 4 xyza x=column y=pier z=story a=1,2 1=down 2=up
+	element elasticBeamColumn  1131  138 130 $Acol_ext12 $Es $Icol_ext12mod $PDeltaTransf;	# Pier 1 xyza x=column y=pier z=story a=1,2 1=down 2=up
+	element elasticBeamColumn  1231  238 230 $Acol_int12 $Es $Icol_int12mod $PDeltaTransf;	# Pier 2 xyza x=column y=pier z=story a=1,2 1=down 2=up
+	element elasticBeamColumn  1331  338 330 $Acol_int12 $Es $Icol_int12mod $PDeltaTransf;	# Pier 3 xyza x=column y=pier z=story a=1,2 1=down 2=up
+	element elasticBeamColumn  1431  438 430 $Acol_ext12 $Es $Icol_ext12mod $PDeltaTransf;	# Pier 4 xyza x=column y=pier z=story a=1,2 1=down 2=up
 	# Columns Story 3 above node splice 
-	element elasticBeamColumn  1132  130 145 $Acol_1434 $Es $Icol_1434mod $PDeltaTransf;	# Pier 1 xyza x=column y=pier z=story a=1,2 1=down 2=up 
-	element elasticBeamColumn  1232  230 245 $Acol_2334 $Es $Icol_2334mod $PDeltaTransf;	# Pier 2 xyza x=column y=pier z=story a=1,2 1=down 2=up
-	element elasticBeamColumn  1332  330 345 $Acol_2334 $Es $Icol_2334mod $PDeltaTransf;	# Pier 3 xyza x=column y=pier z=story a=1,2 1=down 2=up
-	element elasticBeamColumn  1432  430 445 $Acol_1434 $Es $Icol_1434mod $PDeltaTransf;	# Pier 4 xyza x=column y=pier z=story a=1,2 1=down 2=up
+	element elasticBeamColumn  1132  130 145 $Acol_ext34 $Es $Icol_ext34mod $PDeltaTransf;	# Pier 1 xyza x=column y=pier z=story a=1,2 1=down 2=up 
+	element elasticBeamColumn  1232  230 245 $Acol_int34 $Es $Icol_int34mod $PDeltaTransf;	# Pier 2 xyza x=column y=pier z=story a=1,2 1=down 2=up
+	element elasticBeamColumn  1332  330 345 $Acol_int34 $Es $Icol_int34mod $PDeltaTransf;	# Pier 3 xyza x=column y=pier z=story a=1,2 1=down 2=up
+	element elasticBeamColumn  1432  430 445 $Acol_ext34 $Es $Icol_ext34mod $PDeltaTransf;	# Pier 4 xyza x=column y=pier z=story a=1,2 1=down 2=up
 	# Columns Story 4
-	element elasticBeamColumn  114  148 155 $Acol_1434 $Es $Icol_1434mod $PDeltaTransf;	# Pier 1
-	element elasticBeamColumn  124  248 255 $Acol_2334 $Es $Icol_2334mod $PDeltaTransf;	# Pier 2
-	element elasticBeamColumn  134  348 355 $Acol_2334 $Es $Icol_2334mod $PDeltaTransf;	# Pier 3
-	element elasticBeamColumn  144  448 455 $Acol_1434 $Es $Icol_1434mod $PDeltaTransf;	# Pier 4
+	element elasticBeamColumn  114  148 155 $Acol_ext34 $Es $Icol_ext34mod $PDeltaTransf;	# Pier 1
+	element elasticBeamColumn  124  248 255 $Acol_int34 $Es $Icol_int34mod $PDeltaTransf;	# Pier 2
+	element elasticBeamColumn  134  348 355 $Acol_int34 $Es $Icol_int34mod $PDeltaTransf;	# Pier 3
+	element elasticBeamColumn  144  448 455 $Acol_ext34 $Es $Icol_ext34mod $PDeltaTransf;	# Pier 4
 	# Columns Story 5 below node splice
-	element elasticBeamColumn  1151  158 150 $Acol_1434 $Es $Icol_1434mod $PDeltaTransf;	# Pier 1 xyza x=column y=pier z=story a=1,2 1=down 2=up
-	element elasticBeamColumn  1251  258 250 $Acol_2334 $Es $Icol_2334mod $PDeltaTransf;	# Pier 2 xyza x=column y=pier z=story a=1,2 1=down 2=up
-	element elasticBeamColumn  1351  358 350 $Acol_2334 $Es $Icol_2334mod $PDeltaTransf;	# Pier 3 xyza x=column y=pier z=story a=1,2 1=down 2=up
-	element elasticBeamColumn  1451  458 450 $Acol_1434 $Es $Icol_1434mod $PDeltaTransf;	# Pier 4 xyza x=column y=pier z=story a=1,2 1=down 2=up
+	element elasticBeamColumn  1151  158 150 $Acol_ext34 $Es $Icol_ext34mod $PDeltaTransf;	# Pier 1 xyza x=column y=pier z=story a=1,2 1=down 2=up
+	element elasticBeamColumn  1251  258 250 $Acol_int34 $Es $Icol_int34mod $PDeltaTransf;	# Pier 2 xyza x=column y=pier z=story a=1,2 1=down 2=up
+	element elasticBeamColumn  1351  358 350 $Acol_int34 $Es $Icol_int34mod $PDeltaTransf;	# Pier 3 xyza x=column y=pier z=story a=1,2 1=down 2=up
+	element elasticBeamColumn  1451  458 450 $Acol_ext34 $Es $Icol_ext34mod $PDeltaTransf;	# Pier 4 xyza x=column y=pier z=story a=1,2 1=down 2=up
 	# Columns Story 5 above node splice
-	element elasticBeamColumn  1152  150 165 $Acol_1456 $Es $Icol_1456mod $PDeltaTransf;	# Pier 1 xyza x=column y=pier z=story a=1,2 1=down 2=up
-	element elasticBeamColumn  1252  250 265 $Acol_2356 $Es $Icol_2356mod $PDeltaTransf;	# Pier 2 xyza x=column y=pier z=story a=1,2 1=down 2=up
-	element elasticBeamColumn  1352  350 365 $Acol_2356 $Es $Icol_2356mod $PDeltaTransf;	# Pier 3 xyza x=column y=pier z=story a=1,2 1=down 2=up
-	element elasticBeamColumn  1452  450 465 $Acol_1456 $Es $Icol_1456mod $PDeltaTransf;	# Pier 4 xyza x=column y=pier z=story a=1,2 1=down 2=up
+	element elasticBeamColumn  1152  150 165 $Acol_ext56 $Es $Icol_ext56mod $PDeltaTransf;	# Pier 1 xyza x=column y=pier z=story a=1,2 1=down 2=up
+	element elasticBeamColumn  1252  250 265 $Acol_int56 $Es $Icol_int56mod $PDeltaTransf;	# Pier 2 xyza x=column y=pier z=story a=1,2 1=down 2=up
+	element elasticBeamColumn  1352  350 365 $Acol_int56 $Es $Icol_int56mod $PDeltaTransf;	# Pier 3 xyza x=column y=pier z=story a=1,2 1=down 2=up
+	element elasticBeamColumn  1452  450 465 $Acol_ext56 $Es $Icol_ext56mod $PDeltaTransf;	# Pier 4 xyza x=column y=pier z=story a=1,2 1=down 2=up
 	# Columns Story 6
-	element elasticBeamColumn  116  168 175 $Acol_1456 $Es $Icol_1456mod $PDeltaTransf;	# Pier 1
-	element elasticBeamColumn  126  268 275 $Acol_2356 $Es $Icol_2356mod $PDeltaTransf;	# Pier 2
-	element elasticBeamColumn  136  368 375 $Acol_2356 $Es $Icol_2356mod $PDeltaTransf;	# Pier 3
-	element elasticBeamColumn  146  468 475 $Acol_1456 $Es $Icol_1456mod $PDeltaTransf;	# Pier 4
+	element elasticBeamColumn  116  168 175 $Acol_ext56 $Es $Icol_ext56mod $PDeltaTransf;	# Pier 1
+	element elasticBeamColumn  126  268 275 $Acol_int56 $Es $Icol_int56mod $PDeltaTransf;	# Pier 2
+	element elasticBeamColumn  136  368 375 $Acol_int56 $Es $Icol_int56mod $PDeltaTransf;	# Pier 3
+	element elasticBeamColumn  146  468 475 $Acol_ext56 $Es $Icol_ext56mod $PDeltaTransf;	# Pier 4
 	# Columns Story 7 below node splice
-	element elasticBeamColumn  1171  178 170 $Acol_1456 $Es $Icol_1456mod $PDeltaTransf;	# Pier 1 xyza x=column y=pier z=story a=1,2 1=down 2=up
-	element elasticBeamColumn  1271  278 270 $Acol_2356 $Es $Icol_2356mod $PDeltaTransf;	# Pier 2 xyza x=column y=pier z=story a=1,2 1=down 2=up
-	element elasticBeamColumn  1371  378 370 $Acol_2356 $Es $Icol_2356mod $PDeltaTransf;	# Pier 3 xyza x=column y=pier z=story a=1,2 1=down 2=up
-	element elasticBeamColumn  1471  478 470 $Acol_1456 $Es $Icol_1456mod $PDeltaTransf;	# Pier 4 xyza x=column y=pier z=story a=1,2 1=down 2=up
+	element elasticBeamColumn  1171  178 170 $Acol_ext56 $Es $Icol_ext56mod $PDeltaTransf;	# Pier 1 xyza x=column y=pier z=story a=1,2 1=down 2=up
+	element elasticBeamColumn  1271  278 270 $Acol_int56 $Es $Icol_int56mod $PDeltaTransf;	# Pier 2 xyza x=column y=pier z=story a=1,2 1=down 2=up
+	element elasticBeamColumn  1371  378 370 $Acol_int56 $Es $Icol_int56mod $PDeltaTransf;	# Pier 3 xyza x=column y=pier z=story a=1,2 1=down 2=up
+	element elasticBeamColumn  1471  478 470 $Acol_ext56 $Es $Icol_ext56mod $PDeltaTransf;	# Pier 4 xyza x=column y=pier z=story a=1,2 1=down 2=up
 	# Columns Story 7 above node splice
-	element elasticBeamColumn  1172  170 185 $Acol_1478 $Es $Icol_1478mod $PDeltaTransf;	# Pier 1 xyza x=column y=pier z=story a=1,2 1=down 2=up
-	element elasticBeamColumn  1272  270 285 $Acol_2378 $Es $Icol_2378mod $PDeltaTransf;	# Pier 2 xyza x=column y=pier z=story a=1,2 1=down 2=up
-	element elasticBeamColumn  1372  370 385 $Acol_2378 $Es $Icol_2378mod $PDeltaTransf;	# Pier 3 xyza x=column y=pier z=story a=1,2 1=down 2=up
-	element elasticBeamColumn  1472  470 485 $Acol_1478 $Es $Icol_1478mod $PDeltaTransf;	# Pier 4 xyza x=column y=pier z=story a=1,2 1=down 2=up
+	element elasticBeamColumn  1172  170 185 $Acol_ext78 $Es $Icol_ext78mod $PDeltaTransf;	# Pier 1 xyza x=column y=pier z=story a=1,2 1=down 2=up
+	element elasticBeamColumn  1272  270 285 $Acol_int78 $Es $Icol_int78mod $PDeltaTransf;	# Pier 2 xyza x=column y=pier z=story a=1,2 1=down 2=up
+	element elasticBeamColumn  1372  370 385 $Acol_int78 $Es $Icol_int78mod $PDeltaTransf;	# Pier 3 xyza x=column y=pier z=story a=1,2 1=down 2=up
+	element elasticBeamColumn  1472  470 485 $Acol_ext78 $Es $Icol_ext78mod $PDeltaTransf;	# Pier 4 xyza x=column y=pier z=story a=1,2 1=down 2=up
 	# Columns Story 8
-	element elasticBeamColumn  118  188 195 $Acol_1478 $Es $Icol_1478mod $PDeltaTransf;	# Pier 1
-	element elasticBeamColumn  128  288 295 $Acol_2378 $Es $Icol_2378mod $PDeltaTransf;	# Pier 2
-	element elasticBeamColumn  138  388 395 $Acol_2378 $Es $Icol_2378mod $PDeltaTransf;	# Pier 3
-	element elasticBeamColumn  148  488 495 $Acol_1478 $Es $Icol_1478mod $PDeltaTransf;	# Pier 4
+	element elasticBeamColumn  118  188 195 $Acol_ext78 $Es $Icol_ext78mod $PDeltaTransf;	# Pier 1
+	element elasticBeamColumn  128  288 295 $Acol_int78 $Es $Icol_int78mod $PDeltaTransf;	# Pier 2
+	element elasticBeamColumn  138  388 395 $Acol_int78 $Es $Icol_int78mod $PDeltaTransf;	# Pier 3
+	element elasticBeamColumn  148  488 495 $Acol_ext78 $Es $Icol_ext78mod $PDeltaTransf;	# Pier 4
 	
 # define elastic beam elements
 	# element between plastic hinges: eleID convention = "2xy" where 2 = beam, x = Bay #, y = Floor #
@@ -1352,9 +1350,9 @@
 	set th_uN 0.4;			# ultimate rot capacity for neg loading
 	set DP 1.0;				# rate of cyclic deterioration for pos loading
 	set DN 1.0;				# rate of cyclic deterioration for neg loading
-	set a_mem14 [expr ($n+1.0)*($Mycol_1412*($McMy-1.0)) / ($Ks_col_141*$th_pP)];	# strain hardening ratio of spring
+	set a_mem14 [expr ($n+1.0)*($Mycol_ext12*($McMy-1.0)) / ($Ks_col_ext1*$th_pP)];	# strain hardening ratio of spring
 	set b14 [expr ($a_mem14)/(1.0+$n*(1.0-$a_mem14))];							# modified strain hardening ratio of spring (Ibarra & Krawinkler 2005, note: Eqn B.5 is incorrect)
-	set a_mem23 [expr ($n+1.0)*($Mycol_2312*($McMy-1.0)) / ($Ks_col_231*$th_pP)];	# strain hardening ratio of spring
+	set a_mem23 [expr ($n+1.0)*($Mycol_int12*($McMy-1.0)) / ($Ks_col_int1*$th_pP)];	# strain hardening ratio of spring
 	set b23 [expr ($a_mem23)/(1.0+$n*(1.0-$a_mem23))];							# modified strain hardening ratio of spring (Ibarra & Krawinkler 2005, note: Eqn B.5 is incorrect)
 
 # define column springs
@@ -1362,122 +1360,122 @@
 	# "a" convention: 1 = bottom of story, 2 = top of story
 	# command: rotSpring2DModIKModel	id    ndR  ndC     K   asPos  asNeg  MyPos      MyNeg      LS    LK    LA    LD   cS   cK   cA   cD  th_p+   th_p-   th_pc+   th_pc-  Res+   Res-   th_u+   th_u-    D+     D-
 	# col springs @ bottom of Story 1 (at base)
-	rotSpring2DModIKModel 3111 11 117 $Ks_col_141 $b14 $b14 $Mycol_1412 [expr -$Mycol_1412] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
-	rotSpring2DModIKModel 3211 21 217 $Ks_col_231 $b23 $b23 $Mycol_2312 [expr -$Mycol_2312] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
-	rotSpring2DModIKModel 3311 31 317 $Ks_col_231 $b23 $b23 $Mycol_2312 [expr -$Mycol_2312] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
-	rotSpring2DModIKModel 3411 41 417 $Ks_col_141 $b14 $b14 $Mycol_1412 [expr -$Mycol_1412] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
+	rotSpring2DModIKModel 3111 11 117 $Ks_col_ext1 $b14 $b14 $Mycol_ext12 [expr -$Mycol_ext12] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
+	rotSpring2DModIKModel 3211 21 217 $Ks_col_int1 $b23 $b23 $Mycol_int12 [expr -$Mycol_int12] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
+	rotSpring2DModIKModel 3311 31 317 $Ks_col_int1 $b23 $b23 $Mycol_int12 [expr -$Mycol_int12] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
+	rotSpring2DModIKModel 3411 41 417 $Ks_col_ext1 $b14 $b14 $Mycol_ext12 [expr -$Mycol_ext12] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
 	#col springs @ top of Story 1 (below Floor 2)
-	rotSpring2DModIKModel 3112 126 125 $Ks_col_141 $b14 $b14 $Mycol_1412 [expr -$Mycol_1412] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
-	rotSpring2DModIKModel 3212 226 225 $Ks_col_231 $b23 $b23 $Mycol_2312 [expr -$Mycol_2312] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
-	rotSpring2DModIKModel 3312 326 325 $Ks_col_231 $b23 $b23 $Mycol_2312 [expr -$Mycol_2312] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
-	rotSpring2DModIKModel 3412 426 425 $Ks_col_141 $b14 $b14 $Mycol_1412 [expr -$Mycol_1412] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
+	rotSpring2DModIKModel 3112 126 125 $Ks_col_ext1 $b14 $b14 $Mycol_ext12 [expr -$Mycol_ext12] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
+	rotSpring2DModIKModel 3212 226 225 $Ks_col_int1 $b23 $b23 $Mycol_int12 [expr -$Mycol_int12] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
+	rotSpring2DModIKModel 3312 326 325 $Ks_col_int1 $b23 $b23 $Mycol_int12 [expr -$Mycol_int12] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
+	rotSpring2DModIKModel 3412 426 425 $Ks_col_ext1 $b14 $b14 $Mycol_ext12 [expr -$Mycol_ext12] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
 
 	# recompute strain hardening since Story 2 is not the same height as Story 1
-	set a_mem14 [expr ($n+1.0)*($Mycol_1412*($McMy-1.0)) / ($Ks_col_142*$th_pP)];	# strain hardening ratio of spring
+	set a_mem14 [expr ($n+1.0)*($Mycol_ext12*($McMy-1.0)) / ($Ks_col_ext2*$th_pP)];	# strain hardening ratio of spring
 	set b14 [expr ($a_mem14)/(1.0+$n*(1.0-$a_mem14))];							# modified strain hardening ratio of spring (Ibarra & Krawinkler 2005, note: Eqn B.5 is incorrect)
-	set a_mem23 [expr ($n+1.0)*($Mycol_2312*($McMy-1.0)) / ($Ks_col_232*$th_pP)];	# strain hardening ratio of spring
+	set a_mem23 [expr ($n+1.0)*($Mycol_int12*($McMy-1.0)) / ($Ks_col_int2*$th_pP)];	# strain hardening ratio of spring
 	set b23 [expr ($a_mem23)/(1.0+$n*(1.0-$a_mem23))];							# modified strain hardening ratio of spring (Ibarra & Krawinkler 2005, note: Eqn B.5 is incorrect)
 	# col springs @ bottom of Story 2 (at base)
-	rotSpring2DModIKModel 3121 127 128 $Ks_col_142 $b14 $b14 $Mycol_1412 [expr -$Mycol_1412] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
-	rotSpring2DModIKModel 3221 227 228 $Ks_col_232 $b23 $b23 $Mycol_2312 [expr -$Mycol_2312] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
-	rotSpring2DModIKModel 3321 327 328 $Ks_col_232 $b23 $b23 $Mycol_2312 [expr -$Mycol_2312] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
-	rotSpring2DModIKModel 3421 427 428 $Ks_col_142 $b14 $b14 $Mycol_1412 [expr -$Mycol_1412] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
+	rotSpring2DModIKModel 3121 127 128 $Ks_col_ext2 $b14 $b14 $Mycol_ext12 [expr -$Mycol_ext12] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
+	rotSpring2DModIKModel 3221 227 228 $Ks_col_int2 $b23 $b23 $Mycol_int12 [expr -$Mycol_int12] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
+	rotSpring2DModIKModel 3321 327 328 $Ks_col_int2 $b23 $b23 $Mycol_int12 [expr -$Mycol_int12] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
+	rotSpring2DModIKModel 3421 427 428 $Ks_col_ext2 $b14 $b14 $Mycol_ext12 [expr -$Mycol_ext12] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
 	#col springs @ top of Story 2 (below Floor 3)
-	rotSpring2DModIKModel 3122 136 135 $Ks_col_142 $b14 $b14 $Mycol_1412 [expr -$Mycol_1412] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
-	rotSpring2DModIKModel 3222 236 235 $Ks_col_232 $b23 $b23 $Mycol_2312 [expr -$Mycol_2312] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
-	rotSpring2DModIKModel 3322 336 335 $Ks_col_232 $b23 $b23 $Mycol_2312 [expr -$Mycol_2312] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
-	rotSpring2DModIKModel 3422 436 435 $Ks_col_142 $b14 $b14 $Mycol_1412 [expr -$Mycol_1412] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
+	rotSpring2DModIKModel 3122 136 135 $Ks_col_ext2 $b14 $b14 $Mycol_ext12 [expr -$Mycol_ext12] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
+	rotSpring2DModIKModel 3222 236 235 $Ks_col_int2 $b23 $b23 $Mycol_int12 [expr -$Mycol_int12] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
+	rotSpring2DModIKModel 3322 336 335 $Ks_col_int2 $b23 $b23 $Mycol_int12 [expr -$Mycol_int12] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
+	rotSpring2DModIKModel 3422 436 435 $Ks_col_ext2 $b14 $b14 $Mycol_ext12 [expr -$Mycol_ext12] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
 
 	
-	set a_mem14 [expr ($n+1.0)*($Mycol_1434*($McMy-1.0)) / ($Ks_col_143*$th_pP)];	# strain hardening ratio of spring
+	set a_mem14 [expr ($n+1.0)*($Mycol_ext34*($McMy-1.0)) / ($Ks_col_ext3*$th_pP)];	# strain hardening ratio of spring
 	set b14 [expr ($a_mem14)/(1.0+$n*(1.0-$a_mem14))];							# modified strain hardening ratio of spring (Ibarra & Krawinkler 2005, note: Eqn B.5 is incorrect)
-	set a_mem23 [expr ($n+1.0)*($Mycol_2334*($McMy-1.0)) / ($Ks_col_233*$th_pP)];	# strain hardening ratio of spring
+	set a_mem23 [expr ($n+1.0)*($Mycol_int34*($McMy-1.0)) / ($Ks_col_int3*$th_pP)];	# strain hardening ratio of spring
 	set b23 [expr ($a_mem23)/(1.0+$n*(1.0-$a_mem23))];							# modified strain hardening ratio of spring (Ibarra & Krawinkler 2005, note: Eqn B.5 is incorrect)
 	# col springs @ bottom of Story 3 (at base)
-	rotSpring2DModIKModel 3131 137 138 $Ks_col_143 $b14 $b14 $Mycol_1434 [expr -$Mycol_1434] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
-	rotSpring2DModIKModel 3231 237 238 $Ks_col_233 $b23 $b23 $Mycol_2334 [expr -$Mycol_2334] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
-	rotSpring2DModIKModel 3331 337 338 $Ks_col_233 $b23 $b23 $Mycol_2334 [expr -$Mycol_2334] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
-	rotSpring2DModIKModel 3431 437 438 $Ks_col_143 $b14 $b14 $Mycol_1434 [expr -$Mycol_1434] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
+	rotSpring2DModIKModel 3131 137 138 $Ks_col_ext2 $b14 $b14 $Mycol_ext12 [expr -$Mycol_ext12] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
+	rotSpring2DModIKModel 3231 237 238 $Ks_col_int2 $b23 $b23 $Mycol_int12 [expr -$Mycol_int12] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
+	rotSpring2DModIKModel 3331 337 338 $Ks_col_int2 $b23 $b23 $Mycol_int12 [expr -$Mycol_int12] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
+	rotSpring2DModIKModel 3431 437 438 $Ks_col_ext2 $b14 $b14 $Mycol_ext12 [expr -$Mycol_ext12] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
 	#col springs @ top of Story 3 (below Floor 4)
-	rotSpring2DModIKModel 3132 146 145 $Ks_col_143 $b14 $b14 $Mycol_1434 [expr -$Mycol_1434] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
-	rotSpring2DModIKModel 3232 246 245 $Ks_col_233 $b23 $b23 $Mycol_2334 [expr -$Mycol_2334] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
-	rotSpring2DModIKModel 3332 346 345 $Ks_col_233 $b23 $b23 $Mycol_2334 [expr -$Mycol_2334] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
-	rotSpring2DModIKModel 3432 446 445 $Ks_col_143 $b14 $b14 $Mycol_1434 [expr -$Mycol_1434] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
+	rotSpring2DModIKModel 3132 146 145 $Ks_col_ext3 $b14 $b14 $Mycol_ext34 [expr -$Mycol_ext34] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
+	rotSpring2DModIKModel 3232 246 245 $Ks_col_int3 $b23 $b23 $Mycol_int34 [expr -$Mycol_int34] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
+	rotSpring2DModIKModel 3332 346 345 $Ks_col_int3 $b23 $b23 $Mycol_int34 [expr -$Mycol_int34] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
+	rotSpring2DModIKModel 3432 446 445 $Ks_col_ext3 $b14 $b14 $Mycol_ext34 [expr -$Mycol_ext34] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
 
-	set a_mem14 [expr ($n+1.0)*($Mycol_1434*($McMy-1.0)) / ($Ks_col_144*$th_pP)];	# strain hardening ratio of spring
+	set a_mem14 [expr ($n+1.0)*($Mycol_ext34*($McMy-1.0)) / ($Ks_col_ext4*$th_pP)];	# strain hardening ratio of spring
 	set b14 [expr ($a_mem14)/(1.0+$n*(1.0-$a_mem14))];							# modified strain hardening ratio of spring (Ibarra & Krawinkler 2005, note: Eqn B.5 is incorrect)
-	set a_mem23 [expr ($n+1.0)*($Mycol_2334*($McMy-1.0)) / ($Ks_col_234*$th_pP)];	# strain hardening ratio of spring
+	set a_mem23 [expr ($n+1.0)*($Mycol_int34*($McMy-1.0)) / ($Ks_col_int4*$th_pP)];	# strain hardening ratio of spring
 	set b23 [expr ($a_mem23)/(1.0+$n*(1.0-$a_mem23))];							# modified strain hardening ratio of spring (Ibarra & Krawinkler 2005, note: Eqn B.5 is incorrect)
 	# col springs @ bottom of Story 4 (at base)
-	rotSpring2DModIKModel 3141 147 148 $Ks_col_144 $b14 $b14 $Mycol_1434 [expr -$Mycol_1434] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
-	rotSpring2DModIKModel 3241 247 248 $Ks_col_234 $b23 $b23 $Mycol_2334 [expr -$Mycol_2334] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
-	rotSpring2DModIKModel 3341 347 348 $Ks_col_234 $b23 $b23 $Mycol_2334 [expr -$Mycol_2334] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
-	rotSpring2DModIKModel 3441 447 448 $Ks_col_144 $b14 $b14 $Mycol_1434 [expr -$Mycol_1434] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
+	rotSpring2DModIKModel 3141 147 148 $Ks_col_ext4 $b14 $b14 $Mycol_ext34 [expr -$Mycol_ext34] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
+	rotSpring2DModIKModel 3241 247 248 $Ks_col_int4 $b23 $b23 $Mycol_int34 [expr -$Mycol_int34] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
+	rotSpring2DModIKModel 3341 347 348 $Ks_col_int4 $b23 $b23 $Mycol_int34 [expr -$Mycol_int34] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
+	rotSpring2DModIKModel 3441 447 448 $Ks_col_ext4 $b14 $b14 $Mycol_ext34 [expr -$Mycol_ext34] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
 	#col springs @ top of Story 4 (below Floor 5)
-	rotSpring2DModIKModel 3142 156 155 $Ks_col_144 $b14 $b14 $Mycol_1434 [expr -$Mycol_1434] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
-	rotSpring2DModIKModel 3242 256 255 $Ks_col_234 $b23 $b23 $Mycol_2334 [expr -$Mycol_2334] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
-	rotSpring2DModIKModel 3342 356 355 $Ks_col_234 $b23 $b23 $Mycol_2334 [expr -$Mycol_2334] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
-	rotSpring2DModIKModel 3442 456 455 $Ks_col_144 $b14 $b14 $Mycol_1434 [expr -$Mycol_1434] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
+	rotSpring2DModIKModel 3142 156 155 $Ks_col_ext4 $b14 $b14 $Mycol_ext34 [expr -$Mycol_ext34] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
+	rotSpring2DModIKModel 3242 256 255 $Ks_col_int4 $b23 $b23 $Mycol_int34 [expr -$Mycol_int34] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
+	rotSpring2DModIKModel 3342 356 355 $Ks_col_int4 $b23 $b23 $Mycol_int34 [expr -$Mycol_int34] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
+	rotSpring2DModIKModel 3442 456 455 $Ks_col_ext4 $b14 $b14 $Mycol_ext34 [expr -$Mycol_ext34] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
 
-	set a_mem14 [expr ($n+1.0)*($Mycol_1456*($McMy-1.0)) / ($Ks_col_145*$th_pP)];	# strain hardening ratio of spring
+	set a_mem14 [expr ($n+1.0)*($Mycol_ext56*($McMy-1.0)) / ($Ks_col_ext5*$th_pP)];	# strain hardening ratio of spring
 	set b14 [expr ($a_mem14)/(1.0+$n*(1.0-$a_mem14))];							# modified strain hardening ratio of spring (Ibarra & Krawinkler 2005, note: Eqn B.5 is incorrect)
-	set a_mem23 [expr ($n+1.0)*($Mycol_2356*($McMy-1.0)) / ($Ks_col_235*$th_pP)];	# strain hardening ratio of spring
+	set a_mem23 [expr ($n+1.0)*($Mycol_int56*($McMy-1.0)) / ($Ks_col_int5*$th_pP)];	# strain hardening ratio of spring
 	set b23 [expr ($a_mem23)/(1.0+$n*(1.0-$a_mem23))];							# modified strain hardening ratio of spring (Ibarra & Krawinkler 2005, note: Eqn B.5 is incorrect)
 	# col springs @ bottom of Story 5 (at base)
-	rotSpring2DModIKModel 3151 157 158 $Ks_col_145 $b14 $b14 $Mycol_1456 [expr -$Mycol_1456] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
-	rotSpring2DModIKModel 3251 257 258 $Ks_col_235 $b23 $b23 $Mycol_2356 [expr -$Mycol_2356] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
-	rotSpring2DModIKModel 3351 357 358 $Ks_col_235 $b23 $b23 $Mycol_2356 [expr -$Mycol_2356] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
-	rotSpring2DModIKModel 3451 457 458 $Ks_col_145 $b14 $b14 $Mycol_1456 [expr -$Mycol_1456] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
+	rotSpring2DModIKModel 3151 157 158 $Ks_col_ext4 $b14 $b14 $Mycol_ext34 [expr -$Mycol_ext34] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
+	rotSpring2DModIKModel 3251 257 258 $Ks_col_int4 $b23 $b23 $Mycol_int34 [expr -$Mycol_int34] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
+	rotSpring2DModIKModel 3351 357 358 $Ks_col_int4 $b23 $b23 $Mycol_int34 [expr -$Mycol_int34] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
+	rotSpring2DModIKModel 3451 457 458 $Ks_col_ext4 $b14 $b14 $Mycol_ext34 [expr -$Mycol_ext34] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
 	#col springs @ top of Story 5 (below Floor 6)
-	rotSpring2DModIKModel 3152 166 165 $Ks_col_145 $b14 $b14 $Mycol_1456 [expr -$Mycol_1456] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
-	rotSpring2DModIKModel 3252 266 265 $Ks_col_235 $b23 $b23 $Mycol_2356 [expr -$Mycol_2356] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
-	rotSpring2DModIKModel 3352 366 365 $Ks_col_235 $b23 $b23 $Mycol_2356 [expr -$Mycol_2356] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
-	rotSpring2DModIKModel 3452 466 465 $Ks_col_145 $b14 $b14 $Mycol_1456 [expr -$Mycol_1456] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
+	rotSpring2DModIKModel 3152 166 165 $Ks_col_ext5 $b14 $b14 $Mycol_ext56 [expr -$Mycol_ext56] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
+	rotSpring2DModIKModel 3252 266 265 $Ks_col_int5 $b23 $b23 $Mycol_int56 [expr -$Mycol_int56] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
+	rotSpring2DModIKModel 3352 366 365 $Ks_col_int5 $b23 $b23 $Mycol_int56 [expr -$Mycol_int56] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
+	rotSpring2DModIKModel 3452 466 465 $Ks_col_ext5 $b14 $b14 $Mycol_ext56 [expr -$Mycol_ext56] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
 
-	set a_mem14 [expr ($n+1.0)*($Mycol_1456*($McMy-1.0)) / ($Ks_col_146*$th_pP)];	# strain hardening ratio of spring
+	set a_mem14 [expr ($n+1.0)*($Mycol_ext56*($McMy-1.0)) / ($Ks_col_ext6*$th_pP)];	# strain hardening ratio of spring
 	set b14 [expr ($a_mem14)/(1.0+$n*(1.0-$a_mem14))];							# modified strain hardening ratio of spring (Ibarra & Krawinkler 2005, note: Eqn B.5 is incorrect)
-	set a_mem23 [expr ($n+1.0)*($Mycol_2356*($McMy-1.0)) / ($Ks_col_236*$th_pP)];	# strain hardening ratio of spring
+	set a_mem23 [expr ($n+1.0)*($Mycol_int56*($McMy-1.0)) / ($Ks_col_int6*$th_pP)];	# strain hardening ratio of spring
 	set b23 [expr ($a_mem23)/(1.0+$n*(1.0-$a_mem23))];							# modified strain hardening ratio of spring (Ibarra & Krawinkler 2005, note: Eqn B.5 is incorrect)
 	# col springs @ bottom of Story 6 (at base)
-	rotSpring2DModIKModel 3161 167 168 $Ks_col_146 $b14 $b14 $Mycol_1456 [expr -$Mycol_1456] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
-	rotSpring2DModIKModel 3261 267 268 $Ks_col_236 $b23 $b23 $Mycol_2356 [expr -$Mycol_2356] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
-	rotSpring2DModIKModel 3361 367 368 $Ks_col_236 $b23 $b23 $Mycol_2356 [expr -$Mycol_2356] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
-	rotSpring2DModIKModel 3461 467 468 $Ks_col_146 $b14 $b14 $Mycol_1456 [expr -$Mycol_1456] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
+	rotSpring2DModIKModel 3161 167 168 $Ks_col_ext6 $b14 $b14 $Mycol_ext56 [expr -$Mycol_ext56] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
+	rotSpring2DModIKModel 3261 267 268 $Ks_col_int6 $b23 $b23 $Mycol_int56 [expr -$Mycol_int56] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
+	rotSpring2DModIKModel 3361 367 368 $Ks_col_int6 $b23 $b23 $Mycol_int56 [expr -$Mycol_int56] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
+	rotSpring2DModIKModel 3461 467 468 $Ks_col_ext6 $b14 $b14 $Mycol_ext56 [expr -$Mycol_ext56] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
 	#col springs @ top of Story 6 (below Floor 7)
-	rotSpring2DModIKModel 3162 176 175 $Ks_col_146 $b14 $b14 $Mycol_1456 [expr -$Mycol_1456] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
-	rotSpring2DModIKModel 3262 276 275 $Ks_col_236 $b23 $b23 $Mycol_2356 [expr -$Mycol_2356] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
-	rotSpring2DModIKModel 3362 376 375 $Ks_col_236 $b23 $b23 $Mycol_2356 [expr -$Mycol_2356] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
-	rotSpring2DModIKModel 3462 476 475 $Ks_col_146 $b14 $b14 $Mycol_1456 [expr -$Mycol_1456] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
+	rotSpring2DModIKModel 3162 176 175 $Ks_col_ext6 $b14 $b14 $Mycol_ext56 [expr -$Mycol_ext56] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
+	rotSpring2DModIKModel 3262 276 275 $Ks_col_int6 $b23 $b23 $Mycol_int56 [expr -$Mycol_int56] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
+	rotSpring2DModIKModel 3362 376 375 $Ks_col_int6 $b23 $b23 $Mycol_int56 [expr -$Mycol_int56] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
+	rotSpring2DModIKModel 3462 476 475 $Ks_col_ext6 $b14 $b14 $Mycol_ext56 [expr -$Mycol_ext56] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
 
-	set a_mem14 [expr ($n+1.0)*($Mycol_1478*($McMy-1.0)) / ($Ks_col_147*$th_pP)];	# strain hardening ratio of spring
+	set a_mem14 [expr ($n+1.0)*($Mycol_ext78*($McMy-1.0)) / ($Ks_col_ext7*$th_pP)];	# strain hardening ratio of spring
 	set b14 [expr ($a_mem14)/(1.0+$n*(1.0-$a_mem14))];							# modified strain hardening ratio of spring (Ibarra & Krawinkler 2005, note: Eqn B.5 is incorrect)
-	set a_mem23 [expr ($n+1.0)*($Mycol_2378*($McMy-1.0)) / ($Ks_col_237*$th_pP)];	# strain hardening ratio of spring
+	set a_mem23 [expr ($n+1.0)*($Mycol_int78*($McMy-1.0)) / ($Ks_col_int7*$th_pP)];	# strain hardening ratio of spring
 	set b23 [expr ($a_mem23)/(1.0+$n*(1.0-$a_mem23))];							# modified strain hardening ratio of spring (Ibarra & Krawinkler 2005, note: Eqn B.5 is incorrect)
 	# col springs @ bottom of Story 7 (at base)
-	rotSpring2DModIKModel 3171 177 178 $Ks_col_147 $b14 $b14 $Mycol_1478 [expr -$Mycol_1478] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
-	rotSpring2DModIKModel 3271 277 278 $Ks_col_237 $b23 $b23 $Mycol_2378 [expr -$Mycol_2378] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
-	rotSpring2DModIKModel 3371 377 378 $Ks_col_237 $b23 $b23 $Mycol_2378 [expr -$Mycol_2378] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
-	rotSpring2DModIKModel 3471 477 478 $Ks_col_147 $b14 $b14 $Mycol_1478 [expr -$Mycol_1478] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
+	rotSpring2DModIKModel 3171 177 178 $Ks_col_ext6 $b14 $b14 $Mycol_ext56 [expr -$Mycol_ext56] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
+	rotSpring2DModIKModel 3271 277 278 $Ks_col_int6 $b23 $b23 $Mycol_int56 [expr -$Mycol_int56] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
+	rotSpring2DModIKModel 3371 377 378 $Ks_col_int6 $b23 $b23 $Mycol_int56 [expr -$Mycol_int56] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
+	rotSpring2DModIKModel 3471 477 478 $Ks_col_ext6 $b14 $b14 $Mycol_ext56 [expr -$Mycol_ext56] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
 	#col springs @ top of Story 7 (below Floor 8)
-	rotSpring2DModIKModel 3172 186 185 $Ks_col_147 $b14 $b14 $Mycol_1478 [expr -$Mycol_1478] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
-	rotSpring2DModIKModel 3272 286 285 $Ks_col_237 $b23 $b23 $Mycol_2378 [expr -$Mycol_2378] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
-	rotSpring2DModIKModel 3372 386 385 $Ks_col_237 $b23 $b23 $Mycol_2378 [expr -$Mycol_2378] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
-	rotSpring2DModIKModel 3472 486 485 $Ks_col_147 $b14 $b14 $Mycol_1478 [expr -$Mycol_1478] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
+	rotSpring2DModIKModel 3172 186 185 $Ks_col_ext7 $b14 $b14 $Mycol_ext78 [expr -$Mycol_ext78] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
+	rotSpring2DModIKModel 3272 286 285 $Ks_col_int7 $b23 $b23 $Mycol_int78 [expr -$Mycol_int78] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
+	rotSpring2DModIKModel 3372 386 385 $Ks_col_int7 $b23 $b23 $Mycol_int78 [expr -$Mycol_int78] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
+	rotSpring2DModIKModel 3472 486 485 $Ks_col_ext7 $b14 $b14 $Mycol_ext78 [expr -$Mycol_ext78] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
 
-	set a_mem14 [expr ($n+1.0)*($Mycol_1478*($McMy-1.0)) / ($Ks_col_148*$th_pP)];	# strain hardening ratio of spring
+	set a_mem14 [expr ($n+1.0)*($Mycol_ext78*($McMy-1.0)) / ($Ks_col_ext8*$th_pP)];	# strain hardening ratio of spring
 	set b14 [expr ($a_mem14)/(1.0+$n*(1.0-$a_mem14))];							# modified strain hardening ratio of spring (Ibarra & Krawinkler 2005, note: Eqn B.5 is incorrect)
-	set a_mem23 [expr ($n+1.0)*($Mycol_2378*($McMy-1.0)) / ($Ks_col_238*$th_pP)];	# strain hardening ratio of spring
+	set a_mem23 [expr ($n+1.0)*($Mycol_int78*($McMy-1.0)) / ($Ks_col_int8*$th_pP)];	# strain hardening ratio of spring
 	set b23 [expr ($a_mem23)/(1.0+$n*(1.0-$a_mem23))];							# modified strain hardening ratio of spring (Ibarra & Krawinkler 2005, note: Eqn B.5 is incorrect)
 	# col springs @ bottom of Story 8 (at base)
-	rotSpring2DModIKModel 3181 187 188 $Ks_col_148 $b14 $b14 $Mycol_1478 [expr -$Mycol_1478] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
-	rotSpring2DModIKModel 3281 287 288 $Ks_col_238 $b23 $b23 $Mycol_2378 [expr -$Mycol_2378] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
-	rotSpring2DModIKModel 3381 387 388 $Ks_col_238 $b23 $b23 $Mycol_2378 [expr -$Mycol_2378] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
-	rotSpring2DModIKModel 3481 487 488 $Ks_col_148 $b14 $b14 $Mycol_1478 [expr -$Mycol_1478] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
+	rotSpring2DModIKModel 3181 187 188 $Ks_col_ext8 $b14 $b14 $Mycol_ext78 [expr -$Mycol_ext78] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
+	rotSpring2DModIKModel 3281 287 288 $Ks_col_int8 $b23 $b23 $Mycol_int78 [expr -$Mycol_int78] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
+	rotSpring2DModIKModel 3381 387 388 $Ks_col_int8 $b23 $b23 $Mycol_int78 [expr -$Mycol_int78] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
+	rotSpring2DModIKModel 3481 487 488 $Ks_col_ext8 $b14 $b14 $Mycol_ext78 [expr -$Mycol_ext78] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
 	#col springs @ top of Story 8 (below Floor 9)
-	rotSpring2DModIKModel 3182 196 195 $Ks_col_148 $b14 $b14 $Mycol_1478 [expr -$Mycol_1478] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
-	rotSpring2DModIKModel 3282 296 295 $Ks_col_238 $b23 $b23 $Mycol_2378 [expr -$Mycol_2378] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
-	rotSpring2DModIKModel 3382 396 395 $Ks_col_238 $b23 $b23 $Mycol_2378 [expr -$Mycol_2378] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
-	rotSpring2DModIKModel 3482 496 495 $Ks_col_148 $b14 $b14 $Mycol_1478 [expr -$Mycol_1478] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
+	rotSpring2DModIKModel 3182 196 195 $Ks_col_ext8 $b14 $b14 $Mycol_ext78 [expr -$Mycol_ext78] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
+	rotSpring2DModIKModel 3282 296 295 $Ks_col_int8 $b23 $b23 $Mycol_int78 [expr -$Mycol_int78] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
+	rotSpring2DModIKModel 3382 396 395 $Ks_col_int8 $b23 $b23 $Mycol_int78 [expr -$Mycol_int78] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
+	rotSpring2DModIKModel 3482 496 495 $Ks_col_ext8 $b14 $b14 $Mycol_ext78 [expr -$Mycol_ext78] $LS $LK $LA $LD $cS $cK $cA $cD $th_pP $th_pN $th_pcP $th_pcN $ResP $ResN $th_uP $th_uN $DP $DN;
 	# create region for frame column springs
 	# command: region $regionID -ele $ele_1_ID $ele_2_ID...
 	region 1 -ele 3111 3211 3311 3411 3112 3212 3312 3412 3121 3221 3321 3421 3122 3222 3322 3422 3131 3231 3331 3431 3132 3232 3332 3432 3141 3241 3341 3441 3142 3242 3342 3442 3151 3251 3351 3451 3152 3252 3352 3452 3161 3261 3361 3461 3162 3262 3362 3462 3171 3271 3371 3471 3172 3272 3372 3472 3181 3281 3381 3481 3182 3282 3382 3482 ;
@@ -1602,59 +1600,59 @@
 
 	#Floor 2 PZ springs
 	#             ElemID  ndR  ndC  E   Fy   dc       bf_c        tf_c       tp        db       Ry   as
-	rotPanelZone2D 41200 1203 1204 $Es $Fy $dcol_1412 $bfcol_1412 $tfcol_1412 $twcol_1412 $dbeam_23 $Ry $as_PZ;
-	rotPanelZone2D 42200 2203 2204 $Es $Fy $dcol_2312 $bfcol_2312 $tfcol_2312 $twcol_2312 $dbeam_23 $Ry $as_PZ;
-	rotPanelZone2D 43200 3203 3204 $Es $Fy $dcol_2312 $bfcol_2312 $tfcol_2312 $twcol_2312 $dbeam_23 $Ry $as_PZ;
-	rotPanelZone2D 44200 4203 4204 $Es $Fy $dcol_1412 $bfcol_1412 $tfcol_1412 $twcol_1412 $dbeam_23 $Ry $as_PZ;
+	rotPanelZone2D 41200 1203 1204 $Es $Fy $dcol_ext12 $bfcol_ext12 $tfcol_ext12 $twcol_ext12 $dbeam_23 $Ry $as_PZ;
+	rotPanelZone2D 42200 2203 2204 $Es $Fy $dcol_int12 $bfcol_int12 $tfcol_int12 $twcol_int12 $dbeam_23 $Ry $as_PZ;
+	rotPanelZone2D 43200 3203 3204 $Es $Fy $dcol_int12 $bfcol_int12 $tfcol_int12 $twcol_int12 $dbeam_23 $Ry $as_PZ;
+	rotPanelZone2D 44200 4203 4204 $Es $Fy $dcol_ext12 $bfcol_ext12 $tfcol_ext12 $twcol_ext12 $dbeam_23 $Ry $as_PZ;
 
 	#Floor 3 PZ springs
 	#             ElemID  ndR  ndC  E   Fy   dc       bf_c        tf_c       tp        db       Ry   as
-	rotPanelZone2D 41300 1303 1304 $Es $Fy $dcol_1412 $bfcol_1412 $tfcol_1412 $twcol_1412 $dbeam_23 $Ry $as_PZ;
-	rotPanelZone2D 42300 2303 2304 $Es $Fy $dcol_2312 $bfcol_2312 $tfcol_2312 $twcol_2312 $dbeam_23 $Ry $as_PZ;
-	rotPanelZone2D 43300 3303 3304 $Es $Fy $dcol_2312 $bfcol_2312 $tfcol_2312 $twcol_2312 $dbeam_23 $Ry $as_PZ;
-	rotPanelZone2D 44300 4303 4304 $Es $Fy $dcol_1412 $bfcol_1412 $tfcol_1412 $twcol_1412 $dbeam_23 $Ry $as_PZ;
+	rotPanelZone2D 41300 1303 1304 $Es $Fy $dcol_ext12 $bfcol_ext12 $tfcol_ext12 $twcol_ext12 $dbeam_23 $Ry $as_PZ;
+	rotPanelZone2D 42300 2303 2304 $Es $Fy $dcol_int12 $bfcol_int12 $tfcol_int12 $twcol_int12 $dbeam_23 $Ry $as_PZ;
+	rotPanelZone2D 43300 3303 3304 $Es $Fy $dcol_int12 $bfcol_int12 $tfcol_int12 $twcol_int12 $dbeam_23 $Ry $as_PZ;
+	rotPanelZone2D 44300 4303 4304 $Es $Fy $dcol_ext12 $bfcol_ext12 $tfcol_ext12 $twcol_ext12 $dbeam_23 $Ry $as_PZ;
 
 	#Floor 4 PZ springs
 	#             ElemID  ndR  ndC  E   Fy   dc       bf_c        tf_c       tp        db       Ry   as
-	rotPanelZone2D 41400 1403 1404 $Es $Fy $dcol_1434 $bfcol_1434 $tfcol_1434 $twcol_1434 $dbeam_45 $Ry $as_PZ;
-	rotPanelZone2D 42400 2403 2404 $Es $Fy $dcol_2334 $bfcol_2334 $tfcol_2334 $twcol_2334 $dbeam_45 $Ry $as_PZ;
-	rotPanelZone2D 43400 3403 3404 $Es $Fy $dcol_2334 $bfcol_2334 $tfcol_2334 $twcol_2334 $dbeam_45 $Ry $as_PZ;
-	rotPanelZone2D 44400 4403 4404 $Es $Fy $dcol_1434 $bfcol_1434 $tfcol_1434 $twcol_1434 $dbeam_45 $Ry $as_PZ;
+	rotPanelZone2D 41400 1403 1404 $Es $Fy $dcol_ext34 $bfcol_ext34 $tfcol_ext34 $twcol_ext34 $dbeam_45 $Ry $as_PZ;
+	rotPanelZone2D 42400 2403 2404 $Es $Fy $dcol_int34 $bfcol_int34 $tfcol_int34 $twcol_int34 $dbeam_45 $Ry $as_PZ;
+	rotPanelZone2D 43400 3403 3404 $Es $Fy $dcol_int34 $bfcol_int34 $tfcol_int34 $twcol_int34 $dbeam_45 $Ry $as_PZ;
+	rotPanelZone2D 44400 4403 4404 $Es $Fy $dcol_ext34 $bfcol_ext34 $tfcol_ext34 $twcol_ext34 $dbeam_45 $Ry $as_PZ;
 
 	#Floor 5 PZ springs
 	#             ElemID  ndR  ndC  E   Fy   dc       bf_c        tf_c       tp        db       Ry   as
-	rotPanelZone2D 41500 1503 1504 $Es $Fy $dcol_1434 $bfcol_1434 $tfcol_1434 $twcol_1434 $dbeam_45 $Ry $as_PZ;
-	rotPanelZone2D 42500 2503 2504 $Es $Fy $dcol_2334 $bfcol_2334 $tfcol_2334 $twcol_2334 $dbeam_45 $Ry $as_PZ;
-	rotPanelZone2D 43500 3503 3504 $Es $Fy $dcol_2334 $bfcol_2334 $tfcol_2334 $twcol_2334 $dbeam_45 $Ry $as_PZ;
-	rotPanelZone2D 44500 4503 4504 $Es $Fy $dcol_1434 $bfcol_1434 $tfcol_1434 $twcol_1434 $dbeam_45 $Ry $as_PZ;
+	rotPanelZone2D 41500 1503 1504 $Es $Fy $dcol_ext34 $bfcol_ext34 $tfcol_ext34 $twcol_ext34 $dbeam_45 $Ry $as_PZ;
+	rotPanelZone2D 42500 2503 2504 $Es $Fy $dcol_int34 $bfcol_int34 $tfcol_int34 $twcol_int34 $dbeam_45 $Ry $as_PZ;
+	rotPanelZone2D 43500 3503 3504 $Es $Fy $dcol_int34 $bfcol_int34 $tfcol_int34 $twcol_int34 $dbeam_45 $Ry $as_PZ;
+	rotPanelZone2D 44500 4503 4504 $Es $Fy $dcol_ext34 $bfcol_ext34 $tfcol_ext34 $twcol_ext34 $dbeam_45 $Ry $as_PZ;
 
 	#Floor 6 PZ springs
 	#             ElemID  ndR  ndC  E   Fy   dc       bf_c        tf_c       tp        db       Ry   as
-	rotPanelZone2D 41600 1603 1604 $Es $Fy $dcol_1456 $bfcol_1456 $tfcol_1456 $twcol_1456 $dbeam_67 $Ry $as_PZ;
-	rotPanelZone2D 42600 2603 2604 $Es $Fy $dcol_2356 $bfcol_2356 $tfcol_2356 $twcol_2356 $dbeam_67 $Ry $as_PZ;
-	rotPanelZone2D 43600 3603 3604 $Es $Fy $dcol_2356 $bfcol_2356 $tfcol_2356 $twcol_2356 $dbeam_67 $Ry $as_PZ;
-	rotPanelZone2D 44600 4603 4604 $Es $Fy $dcol_1456 $bfcol_1456 $tfcol_1456 $twcol_1456 $dbeam_67 $Ry $as_PZ;
+	rotPanelZone2D 41600 1603 1604 $Es $Fy $dcol_ext56 $bfcol_ext56 $tfcol_ext56 $twcol_ext56 $dbeam_67 $Ry $as_PZ;
+	rotPanelZone2D 42600 2603 2604 $Es $Fy $dcol_int56 $bfcol_int56 $tfcol_int56 $twcol_int56 $dbeam_67 $Ry $as_PZ;
+	rotPanelZone2D 43600 3603 3604 $Es $Fy $dcol_int56 $bfcol_int56 $tfcol_int56 $twcol_int56 $dbeam_67 $Ry $as_PZ;
+	rotPanelZone2D 44600 4603 4604 $Es $Fy $dcol_ext56 $bfcol_ext56 $tfcol_ext56 $twcol_ext56 $dbeam_67 $Ry $as_PZ;
 
 	#Floor 7 PZ springs
 	#             ElemID  ndR  ndC  E   Fy   dc       bf_c        tf_c       tp        db       Ry   as
-	rotPanelZone2D 41700 1703 1704 $Es $Fy $dcol_1456 $bfcol_1456 $tfcol_1456 $twcol_1456 $dbeam_67 $Ry $as_PZ;
-	rotPanelZone2D 42700 2703 2704 $Es $Fy $dcol_2356 $bfcol_2356 $tfcol_2356 $twcol_2356 $dbeam_67 $Ry $as_PZ;
-	rotPanelZone2D 43700 3703 3704 $Es $Fy $dcol_2356 $bfcol_2356 $tfcol_2356 $twcol_2356 $dbeam_67 $Ry $as_PZ;
-	rotPanelZone2D 44700 4703 4704 $Es $Fy $dcol_1456 $bfcol_1456 $tfcol_1456 $twcol_1456 $dbeam_67 $Ry $as_PZ;
+	rotPanelZone2D 41700 1703 1704 $Es $Fy $dcol_ext56 $bfcol_ext56 $tfcol_ext56 $twcol_ext56 $dbeam_67 $Ry $as_PZ;
+	rotPanelZone2D 42700 2703 2704 $Es $Fy $dcol_int56 $bfcol_int56 $tfcol_int56 $twcol_int56 $dbeam_67 $Ry $as_PZ;
+	rotPanelZone2D 43700 3703 3704 $Es $Fy $dcol_int56 $bfcol_int56 $tfcol_int56 $twcol_int56 $dbeam_67 $Ry $as_PZ;
+	rotPanelZone2D 44700 4703 4704 $Es $Fy $dcol_ext56 $bfcol_ext56 $tfcol_ext56 $twcol_ext56 $dbeam_67 $Ry $as_PZ;
 
 	#Floor 8 PZ springs
 	#             ElemID  ndR  ndC  E   Fy   dc       bf_c        tf_c       tp        db       Ry   as
-	rotPanelZone2D 41800 1803 1804 $Es $Fy $dcol_1478 $bfcol_1478 $tfcol_1478 $twcol_1478 $dbeam_89 $Ry $as_PZ;
-	rotPanelZone2D 42800 2803 2804 $Es $Fy $dcol_2378 $bfcol_2378 $tfcol_2378 $twcol_2378 $dbeam_89 $Ry $as_PZ;
-	rotPanelZone2D 43800 3803 3804 $Es $Fy $dcol_2378 $bfcol_2378 $tfcol_2378 $twcol_2378 $dbeam_89 $Ry $as_PZ;
-	rotPanelZone2D 44800 4803 4804 $Es $Fy $dcol_1478 $bfcol_1478 $tfcol_1478 $twcol_1478 $dbeam_89 $Ry $as_PZ;
+	rotPanelZone2D 41800 1803 1804 $Es $Fy $dcol_ext78 $bfcol_ext78 $tfcol_ext78 $twcol_ext78 $dbeam_89 $Ry $as_PZ;
+	rotPanelZone2D 42800 2803 2804 $Es $Fy $dcol_int78 $bfcol_int78 $tfcol_int78 $twcol_int78 $dbeam_89 $Ry $as_PZ;
+	rotPanelZone2D 43800 3803 3804 $Es $Fy $dcol_int78 $bfcol_int78 $tfcol_int78 $twcol_int78 $dbeam_89 $Ry $as_PZ;
+	rotPanelZone2D 44800 4803 4804 $Es $Fy $dcol_ext78 $bfcol_ext78 $tfcol_ext78 $twcol_ext78 $dbeam_89 $Ry $as_PZ;
 
 	#Floor 9 PZ springs
 	#             ElemID  ndR  ndC  E   Fy   dc       bf_c        tf_c       tp        db       Ry   as
-	rotPanelZone2D 41900 1903 1904 $Es $Fy $dcol_1478 $bfcol_1478 $tfcol_1478 $twcol_1478 $dbeam_89 $Ry $as_PZ;
-	rotPanelZone2D 42900 2903 2904 $Es $Fy $dcol_2378 $bfcol_2378 $tfcol_2378 $twcol_2378 $dbeam_89 $Ry $as_PZ;
-	rotPanelZone2D 43900 3903 3904 $Es $Fy $dcol_2378 $bfcol_2378 $tfcol_2378 $twcol_2378 $dbeam_89 $Ry $as_PZ;
-	rotPanelZone2D 44900 4903 4904 $Es $Fy $dcol_1478 $bfcol_1478 $tfcol_1478 $twcol_1478 $dbeam_89 $Ry $as_PZ;
+	rotPanelZone2D 41900 1903 1904 $Es $Fy $dcol_ext78 $bfcol_ext78 $tfcol_ext78 $twcol_ext78 $dbeam_89 $Ry $as_PZ;
+	rotPanelZone2D 42900 2903 2904 $Es $Fy $dcol_int78 $bfcol_int78 $tfcol_int78 $twcol_int78 $dbeam_89 $Ry $as_PZ;
+	rotPanelZone2D 43900 3903 3904 $Es $Fy $dcol_int78 $bfcol_int78 $tfcol_int78 $twcol_int78 $dbeam_89 $Ry $as_PZ;
+	rotPanelZone2D 44900 4903 4904 $Es $Fy $dcol_ext78 $bfcol_ext78 $tfcol_ext78 $twcol_ext78 $dbeam_89 $Ry $as_PZ;
 	
 # define p-delta column spring: zero-stiffness elastic spring	
 	#Spring ID: "5xya" where 5 = leaning column spring, x = Pier #, y = Story #, a = location in story
